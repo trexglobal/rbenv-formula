@@ -55,6 +55,6 @@ app-deps:
     - user: root
     - group: root
     - mode: 755
-    - source: salt://files/profile/rbenv.sh
+    - source: salt://rbenv/files/profile/rbenv.sh
     - require:
       - pkg: rbenv
