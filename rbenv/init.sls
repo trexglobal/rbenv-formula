@@ -44,10 +44,6 @@ app-deps:
   cmd.run:
     - unless: 'RBENV_ROOT=/usr/local/rbenv RBENV_VERSION=2.1.2 rbenv exec gem list | grep bundler'
 
-# Hack until we will get rbenv.do in upcomming saltstack version
-'RBENV_ROOT=/usr/local/rbenv RBENV_VERSION=2.1.2 rbenv exec gem install unicorn --version 4.8.2':
-  cmd.run:
-    - unless: 'RBENV_ROOT=/usr/local/rbenv RBENV_VERSION=2.1.2 rbenv exec gem list | grep unicorn | grep 4.8.2'
 
 /etc/profile.d/rbenv.sh:
   file:
